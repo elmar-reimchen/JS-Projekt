@@ -11,6 +11,7 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
+  padding: 0 0.5rem;
 }
 header {
   font-size: calc(1rem + 1.5vw);
