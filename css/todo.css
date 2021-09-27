@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +12,7 @@ body {
     rgba(63, 227, 251, 1) 0%,
     rgba(70, 252, 130, 1) 100%
   );
-  font-family: "Poppins", sans-serif;
+  font-family: "Bebas Neue", cursive;
   min-height: 100vh;
   align-items: center;
   display: flex;
@@ -28,14 +30,14 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
-  outline: 1px solid rgba(255, 111, 71, 0.664);
+  outline: 1px solid rgba(14, 85, 55, 0.664);
   outline-offset: 3px;
   max-width: 30rem;
 }
 form input,
 form button {
   padding: 0.5rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   border: none;
   background: white;
 }
@@ -68,7 +70,7 @@ button span {
   align-items: center;
 }
 .todo-list {
-  min-width: 28rem;
+  min-width: 35rem;
   margin-top: 1em;
   list-style: none;
 }
@@ -79,9 +81,9 @@ button span {
   align-items: center;
   font-size: 1.5rem;
   padding: 0.5em;
-  border: 2px solid #dfdddda2;
-  box-shadow: 0 5px 5px #6464644d;
-  border-radius: 5px;
+  border: 2px solid #2dd5db4d;
+  box-shadow: 0 5px 5px #2dd5db4d;
+  border-radius: 3px;
 }
 .todo li {
   flex: 1;
@@ -91,7 +93,8 @@ button span {
   background: red;
   color: white;
   border: none;
-  padding: 1rem;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   border-radius: 3px;
 }
