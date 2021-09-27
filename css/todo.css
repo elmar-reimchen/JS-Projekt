@@ -4,19 +4,22 @@
   box-sizing: border-box;
 }
 body {
-  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
-  color: white;
+  background: rgb(63, 227, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 227, 251, 1) 0%,
+    rgba(70, 252, 130, 1) 100%
+  );
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 0 0.5rem;
+  padding: 0 1rem;
 }
 header {
   font-size: calc(1rem + 1.5vw);
-  margin-top: 0.5em;
-  min-height: 20vh;
+  min-height: 15vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,7 +28,7 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
-  outline: 2px solid rgba(255, 111, 71, 0.664);
+  outline: 1px solid rgba(255, 111, 71, 0.664);
   outline-offset: 3px;
   max-width: 30rem;
 }
@@ -45,11 +48,11 @@ form button {
   outline: none;
 }
 form button {
-  color: #ff6f47;
+  color: #646464;
   background: #f7fffe;
   cursor: pointer;
   transition: all 0.3s ease;
-  border-left: 2px solid rgba(255, 111, 71, 0.664);
+  border-left: 1px solid #1bb32f;
 }
 form button:hover {
   background: #ff6f47;
@@ -57,7 +60,7 @@ form button:hover {
 }
 button span {
   font-weight: bold;
-  padding: 5px;
+  padding: 0 5px;
 }
 .todo-container {
   display: flex;
