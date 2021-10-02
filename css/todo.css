@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +8,7 @@
   font-weight: normal;
 }
 body {
-  background: rgb(0, 0, 0,0.9);
+  background: rgb(0, 0, 0, 0.9);
   min-height: 100vh;
   padding: 0 1rem;
   font-family: "Montserrat", sans-serif;
@@ -20,23 +20,19 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Exo 2', sans-serif;
   font-variant: small-caps;
-  letter-spacing: 5px;
+  letter-spacing: 0px;
   text-shadow: 3px 5px 3px rgba(0, 0, 0);
-  padding: 2em 0;
+  padding: 2.5em 0;
 }
 form {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-button:hover{
-  color:#fff;
-}
 .todo-input {
   letter-spacing: 1px;
-  color: #e8eaed;
-
   padding: 0.5rem;
   padding-left: 20px;
   font-size: 2rem;
@@ -45,15 +41,12 @@ button:hover{
   border: 1px solid rgba(0, 0, 0, 0.884);
   color: #e8eaed8a;
 }
-
-  /* width: 100%; */
-
 .todo-input:focus {
   outline: none;
-  border: 1px solid rgba(255, 166, 0, 0.445);
   box-shadow: 0 0 65px orange;
 }
-form button, button {
+form button,
+button {
   color: #646464;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -61,16 +54,14 @@ form button, button {
   display: grid;
   justify-content: center;
   font-size: 2.5rem;
-  
   padding: 0.5rem;
   font-family: "Montserrat", sans-serif;
-  background: rgba(0,0,0, 0.7);
-  border: 2px solid rgba(0, 0, 0, 0.4);
-  color: #e8eaed8a;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.4);
 }
-form button:hover {
-  background: rgba(255, 166, 0, 0.521);
-  color: white;
+button:hover,
+input:hover {
+  color: #fff;
 }
 
 /* AUFGABE */
@@ -148,14 +139,22 @@ select {
   padding: 0.5rem;
 }
 .select {
+  
   display: flex;
+  justify-content: flex-end;
+  align-self: flex-end;
+  flex: 1;
 }
 .list-grid {
   margin: 1rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   color: #e8eaed;
+  gap: 0.5rem;
+}
+.list-grid button{
+  justify-self: flex-start;
+  align-self: flex-start;
 }
 .list-grid h3 {
   margin: 1em;
