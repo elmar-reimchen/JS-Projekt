@@ -17,57 +17,60 @@ body {
 header {
   font-size: calc(1rem + 1.2vw);
   color: rgba(78, 78, 78, 0.781);
-  min-height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-variant: small-caps;
   letter-spacing: 5px;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0);
+  text-shadow: 3px 5px 3px rgba(0, 0, 0);
+  padding: 2em 0;
 }
 form {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-form input,
-form button,
-button {
-  padding: 0.5rem;
-  font-size: 1.5rem;
-  font-family: "Montserrat", sans-serif;
-  background: rgba(3, 3, 3, 0.507);
-  border: 1px solid rgba(0, 0, 0, 0.884);
-  color: #e8eaed8a;
+button:hover{
+  color:#fff;
 }
 .todo-input {
-  padding-left: 20px;
-  border-radius: 2px 0 0 2px;
   letter-spacing: 1px;
   color: #e8eaed;
 
-  /* width: 100%; */
+  padding: 0.5rem;
+  padding-left: 20px;
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  background: rgba(3, 3, 3, 0.685);
+  border: 1px solid rgba(0, 0, 0, 0.884);
+  color: #e8eaed8a;
 }
+
+  /* width: 100%; */
+
 .todo-input:focus {
   outline: none;
-  border: 1px solid rgba(255, 166, 0, 0.76);
-  box-shadow: 0 0 55px orange;
+  border: 1px solid rgba(255, 166, 0, 0.445);
+  box-shadow: 0 0 65px orange;
 }
-form button {
+form button, button {
   color: #646464;
   cursor: pointer;
   transition: all 0.3s ease;
   align-items: center;
   display: grid;
   justify-content: center;
-  font-size: 2rem;
-  padding: 0.4rem 0.5rem;
-  border-radius: 0 2px 2px 0;
+  font-size: 2.5rem;
+  
+  padding: 0.5rem;
+  font-family: "Montserrat", sans-serif;
+  background: rgba(0,0,0, 0.7);
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  color: #e8eaed8a;
 }
 form button:hover {
-  background: orange;
+  background: rgba(255, 166, 0, 0.521);
   color: white;
-  border: 2px solid rgba(255, 255, 255, 0.473);
 }
 
 /* AUFGABE */
@@ -138,12 +141,10 @@ select {
   -moz-appearance: none;
   appearance: none;
   outline: none;
-  border: none;
   background: rgba(3, 3, 3, 0.5);
   border: 2px solid rgba(0, 0, 0, 0.4);
   font-size: 1.5rem;
   color: #e8eaed;
-
   padding: 0.5rem;
 }
 .select {
