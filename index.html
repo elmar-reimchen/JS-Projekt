@@ -20,15 +20,17 @@
 
     <!-- Eingabefeld für neue Aufgabe -->
     <form>
-      <input type="text" class="todo-input" required />
-      <button class="todo-btn" type="submit">
+      <input type="text" class="todo-input" required placeholder="Neue Aufgabe"/>
+      <button class="todo-btn" type="submit" >
         <i class="bx bx-plus"></i>
       </button>
-      <select name="todos" class="filter-todo">
-        <option value="all">Alle</option>
-        <option value="all">Erledigt</option>
-        <option value="all">Nicht erledigt</option>
-      </select>
+      <div class="select">
+        <select name="todos" class="filter-todo">
+          <option value="all">Alle</option>
+          <option value="all">Erledigt</option>
+          <option value="all">Nicht erledigt</option>
+        </select>
+      </div>
     </form>
 
     <!-- Liste der erstellten Aufgaben -->

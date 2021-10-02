@@ -131,4 +131,12 @@ select {
   appearance: none;
   outline: none;
   border: none;
+  background: rgba(3, 3, 3, 0.5);
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+.select{
+  margin:1rem;
 }
