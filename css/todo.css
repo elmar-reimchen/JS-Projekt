@@ -8,7 +8,7 @@
   font-weight: normal;
 }
 body {
-  background: rgb(0, 0, 0, 0.9);
+  background: rgba(20, 20, 20, 0.945);
   min-height: 100vh;
   padding: 0 1rem;
   font-family: "Montserrat", sans-serif;
@@ -16,16 +16,15 @@ body {
 }
 header {
   font-size: calc(1.8rem + 1.2vw);
-  color: rgba(3, 3, 3,0.9);
+  color: rgba(22, 22, 22, 0.835);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Exo 2', sans-serif;
+  font-family: "Exo 2", sans-serif;
   font-variant: small-caps;
   letter-spacing: 0px;
-  text-shadow: 3px 5px 5px rgba(68, 37, 1, 0.616);
-  padding: 2em 0;
-  
+  text-shadow: -8px -8px 5px rgba(0, 0, 0, 0.616);
+  padding: 0 0 1.5em 0;
 }
 form {
   display: flex;
@@ -36,17 +35,19 @@ form {
   letter-spacing: 1px;
   padding: 0.5rem;
   padding-left: 20px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: "Montserrat", sans-serif;
   background: rgba(3, 3, 3, 0.685);
-  border: 1px solid rgba(0, 0, 0, 0.884);
+  border: none;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.884);
+
+  outline: none;
   color: #e8eaed8a;
 }
 .todo-input:focus {
   outline: none;
   box-shadow: 0 0 80px rgba(255, 166, 0, 0.6);
 }
-form button,
 button {
   color: #646464;
   cursor: pointer;
@@ -54,19 +55,72 @@ button {
   align-items: center;
   display: grid;
   justify-content: center;
-  font-size: 2.4rem;
+  font-size: 1.5rem;
   padding: 0.5rem;
   font-family: "Montserrat", sans-serif;
   background: rgba(0, 0, 0, 0.7);
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  border: none;
 }
-button:hover,
+form button {
+  color: #646464;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-items: center;
+  display: grid;
+  justify-content: center;
+  font-size: 2.1rem;
+  padding: 0.5rem;
+  font-family: "Montserrat", sans-serif;
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+}
+button:hover {
+  color: #fff;
+  background: orange;
+}
 input:hover {
   color: #fff;
 }
+/*************** GRID Container ****************/
 
-/* AUFGABE */
-.todo-container {
+.basic-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 3rem 0;
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #353535;
+  font-size: 1.2rem;
+  color: #fff;
+  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
+    rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  transition: all 500ms;
+  overflow: hidden;
+justify-content: space-between;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card:hover {
+  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
+    rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+  transform: translateY(-3px) scale(1.1);
+}
+.card-text {
+  flex: 1;
+  justify-self: flex-start;
+}
+/****************  AUFGABE   *******************/
+/* .todo-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,7 +128,7 @@ input:hover {
 .todo-list {
   margin-top: 3em;
   list-style: none;
-  min-width: 45%;
+   min-width: 45%; 
 }
 .todo {
   display: flex;
@@ -83,9 +137,9 @@ input:hover {
   align-items: center;
   font-size: 1.5rem;
   font-family: "Montserrat", sans-serif;
+  font-variant: small-caps;
   transition: all 0.5s ease;
   background: rgba(3, 3, 3, 0.507);
-  border: 2px solid rgba(0, 0, 0, 0.8);
   border-radius: 2px;
   letter-spacing: 2px;
   color: #e8eaed;
@@ -93,25 +147,26 @@ input:hover {
 
 .todo-item {
   padding: 0 1rem;
-  width: 70%;
   flex: 1;
-}
+  height: 100%;
+  justify-self: flex-start;
+} */
+
 .trash-btn,
 .completed-btn {
   border: none;
-  padding: 0.55rem;
+  padding: 0.8rem;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1rem;
   transition: all 0.3s ease;
   background: rgba(3, 3, 3, 0.507);
-  border: 2px solid rgba(0, 0, 0, 0.8);
   color: #646464;
-  align-self: flex-end;
+  justify-self: flex-end;
+  border: none;
 }
 .completed-btn {
-  padding: 0.2rem 0.8rem;
+  padding: 0.5rem 0.8rem;
 }
-
 .completed-btn:hover {
   background: hsla(128, 74%, 40%, 0.52);
   color: #fff;
@@ -134,13 +189,12 @@ select {
   appearance: none;
   outline: none;
   background: rgba(3, 3, 3, 0.5);
-  border: 2px solid rgba(0, 0, 0, 0.4);
-  font-size: 1.5rem;
+  border: none;
+  font-size: 1rem;
   color: #e8eaed;
   padding: 0.5rem;
 }
 .select {
-  
   display: flex;
   justify-content: flex-end;
   align-self: flex-end;
@@ -152,14 +206,16 @@ select {
   align-items: center;
   color: #e8eaed;
   gap: 0.5rem;
+  transition: all 0.3s ease;
 }
-.list-grid button{
+.list-grid button {
   justify-self: flex-start;
   align-self: flex-start;
 }
 .list-grid h3 {
   margin: 1em;
   font-size: 1rem;
-  color: #e8eaed;
-  font-variant: small-caps;
+  color: rgb(83, 83, 83);
+  text-transform: uppercase;
+  font-weight: bold;
 }

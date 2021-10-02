@@ -14,25 +14,24 @@
 
     <link rel="stylesheet" href="./css/todo.css" />
 
-    <title>ToDo List</title>
+    <title>Todo Liste</title>
   </head>
 
   <body>
     <div class="list-grid">
-      
-        <button onclick="listView()"><i class="fa fa-bars"></i></button>
-        <button onclick="gridView()"><i class="fa fa-th-large"></i></button>
-      
+      <button onclick="listView()"><i class="fa fa-bars"></i></button>
+      <button onclick="gridView()"><i class="fa fa-th-large"></i></button>
+
       <div class="select">
-        <h3>Filter:</h3>
-        <select name="todos" class="filter-todo" id="todos">
+        <h3><label for="todos">Filter:</label></h3>
+        <select name="todos" id="todos" class="filter-todo">
           <option value="all">Alle</option>
           <option value="complete">Erledigt</option>
           <option value="uncomplete">Nicht erledigt</option>
         </select>
       </div>
     </div>
-    
+
     <header>
       <h1>Todo Liste</h1>
     </header>
@@ -46,9 +45,8 @@
     </form>
 
     <!-- Liste der erstellten Aufgaben -->
-    <div class="todo-container">
-      <ul class="todo-list"></ul>
-    </div>
+    <section class="basic-grid">
+    </section>
 
     <script src="js/todo.js"></script>
   </body>
