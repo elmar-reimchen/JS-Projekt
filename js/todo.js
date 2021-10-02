@@ -24,14 +24,15 @@ function addTodo(event) {
 
   // erstelle Button um Aufgabe als erledigt zu markieren
   const completedButton = document.createElement("button");
-  completedButton.innerHTML = "<span>=</span>";
-  completedButton.classList.add("complete-btn");
+  completedButton.innerHTML = "&#10004;";
+  completedButton.classList.add("completed-btn");
   todoDiv.appendChild(completedButton);
 
   // erstelle Button um Aufgabe zu löschen
   const trashButton = document.createElement("button");
-  trashButton.innerHTML = "<span>x</span>";
   trashButton.classList.add("trash-btn");
+  trashButton.classList.add("bx");
+  trashButton.classList.add("bx-trash");
   todoDiv.appendChild(trashButton);
   // div(todoDiv) in ul(todoList) einfügen
   todoList.appendChild(todoDiv);
@@ -43,6 +44,14 @@ function deleteCheck(e) {
   const item = e.target;
   if (item.classList[0] === "trash-btn") {
     const todo = item.parentElement;
-    todo.remove();
+    todo.classList.add("fall");
+    todo.addEventListener("transitionend", function () {
+      todo.remove();
+    });
+  }
+
+  if (item.classList[0] === "completed-btn") {
+    const todo = item.parentElement;
+    todo.classList.toggle("completed");
   }
 }

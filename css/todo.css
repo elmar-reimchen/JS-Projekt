@@ -6,99 +6,129 @@
   box-sizing: border-box;
 }
 body {
-  background: rgb(63, 227, 251);
-  background: radial-gradient(
+  background: rgb(17, 17, 17);
+  /* background: radial-gradient(
     circle,
-    rgba(63, 227, 251, 1) 0%,
-    rgba(70, 252, 130, 1) 100%
-  );
+    rgba(2, 153, 52, 0.76) 0%,
+    rgb(14, 85, 55, 0.966) 100%
+  ); */
   font-family: "Bebas Neue", cursive;
   min-height: 100vh;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
   padding: 0 1rem;
 }
 header {
   font-size: calc(1rem + 1.5vw);
-  min-height: 15vh;
+  color: rgba(73, 73, 73, 0.8);
+  min-height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 form {
   display: flex;
   justify-content: center;
   align-items: center;
-  outline: 1px solid rgba(14, 85, 55, 0.664);
-  outline-offset: 3px;
-  max-width: 30rem;
+  border-radius: 20px;
+  max-width: max-content;
+  margin: 0 auto;
 }
 form input,
 form button {
   padding: 0.5rem;
   font-size: 1.5rem;
-  border: none;
-  background: white;
+  background: rgba(3, 3, 3, 0.507);
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  color: #fff;
 }
 .todo-input {
-  border: none;
-  width: 100%;
+  padding-left: 20px;
+  border-radius: 2px 0 0 2px;
+  /* width: 100%; */
 }
 .todo-input:focus {
-  border: none;
   outline: none;
 }
 form button {
   color: #646464;
-  background: #f7fffe;
   cursor: pointer;
   transition: all 0.3s ease;
-  border-left: 1px solid #1bb32f;
+  border-left: 0;
+  align-items: center;
+  display: grid;
+  justify-content: center;
+  font-size: 2rem;
+  padding: 0.4rem 0.5rem;
+  border-radius: 0 2px 2px 0;
 }
 form button:hover {
   background: #ff6f47;
   color: white;
 }
-button span {
-  font-weight: bold;
-  padding: 0 5px;
-}
+
+/* AUFGABE */
 .todo-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .todo-list {
-  min-width: 35rem;
-  margin-top: 1em;
+  margin-top: 5em;
   list-style: none;
+  min-width: 40%;
 }
 .todo {
   display: flex;
-  margin: 1em;
+  margin: 1rem;
   justify-content: space-between;
   align-items: center;
   font-size: 1.5rem;
-  padding: 0.5em;
-  border: 2px solid #2dd5db4d;
-  box-shadow: 0 5px 5px #2dd5db4d;
-  border-radius: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all 0.5s ease;
+  background: rgba(3, 3, 3, 0.507);
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  color: #fff;
 }
-.todo li {
+
+.todo-item {
   flex: 1;
+  padding: 0 1rem;
 }
 .trash-btn,
-.complete-btn {
-  background: red;
-  color: white;
+.completed-btn {
   border: none;
-  width: 40px;
-  height: 40px;
+  padding: 0.55rem;
   cursor: pointer;
-  border-radius: 3px;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+  background: rgba(3, 3, 3, 0.507);
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  color: white;
 }
-.complete-btn {
-  background: #1bb32faf;
-  margin-right: 3px;
+.completed-btn {
+  padding: 0.2rem 0.8rem;
+}
+
+.completed-btn:hover {
+  background: hsla(128, 74%, 40%, 0.52);
+}
+.trash-btn:hover{
+  
+  background: rgba(255, 5, 5, 0.5);
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.fall {
+  opacity: 0;
+  transform: translateY(8rem) rotateZ(20deg);
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
 }
