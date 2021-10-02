@@ -1,59 +1,62 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-weight: normal;
 }
 body {
-  background: rgb(17, 17, 17);
-  /* background: radial-gradient(
-    circle,
-    rgba(2, 153, 52, 0.76) 0%,
-    rgb(14, 85, 55, 0.966) 100%
-  ); */
-  font-family: "Bebas Neue", cursive;
+  background: rgb(0, 0, 0,0.9);
   min-height: 100vh;
   padding: 0 1rem;
+  font-family: "Montserrat", sans-serif;
+  color: #e8eaed;
 }
 header {
-  font-size: calc(1rem + 1.5vw);
-  color: rgba(73, 73, 73, 0.8);
+  font-size: calc(1rem + 1.2vw);
+  color: rgba(78, 78, 78, 0.781);
   min-height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  font-variant: small-caps;
+  letter-spacing: 5px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0);
 }
 form {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 20px;
-  max-width: max-content;
-  margin: 0 auto;
 }
 form input,
-form button {
+form button,
+button {
   padding: 0.5rem;
   font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
   background: rgba(3, 3, 3, 0.507);
-  border: 2px solid rgba(0, 0, 0, 0.4);
-  color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.884);
+  color: #e8eaed8a;
 }
 .todo-input {
   padding-left: 20px;
   border-radius: 2px 0 0 2px;
+  letter-spacing: 1px;
+  color: #e8eaed;
+
   /* width: 100%; */
 }
 .todo-input:focus {
   outline: none;
+  border: 1px solid rgba(255, 166, 0, 0.76);
+  box-shadow: 0 0 55px orange;
 }
 form button {
   color: #646464;
   cursor: pointer;
   transition: all 0.3s ease;
-  border-left: 0;
   align-items: center;
   display: grid;
   justify-content: center;
@@ -62,8 +65,9 @@ form button {
   border-radius: 0 2px 2px 0;
 }
 form button:hover {
-  background: #ff6f47;
+  background: orange;
   color: white;
+  border: 2px solid rgba(255, 255, 255, 0.473);
 }
 
 /* AUFGABE */
@@ -73,27 +77,29 @@ form button:hover {
   align-items: center;
 }
 .todo-list {
-  margin-top: 5em;
+  margin-top: 3em;
   list-style: none;
-  min-width: 40%;
+  min-width: 45%;
 }
 .todo {
   display: flex;
   margin: 1rem;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   font-size: 1.5rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", sans-serif;
   transition: all 0.5s ease;
   background: rgba(3, 3, 3, 0.507);
-  border: 2px solid rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(0, 0, 0, 0.8);
   border-radius: 2px;
-  color: #fff;
+  letter-spacing: 2px;
+  color: #e8eaed;
 }
 
 .todo-item {
-  flex: 1;
   padding: 0 1rem;
+  width: 70%;
+  flex: 1;
 }
 .trash-btn,
 .completed-btn {
@@ -103,8 +109,9 @@ form button:hover {
   font-size: 2rem;
   transition: all 0.3s ease;
   background: rgba(3, 3, 3, 0.507);
-  border: 2px solid rgba(0, 0, 0, 0.4);
-  color: white;
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  color: #646464;
+  align-self: flex-end;
 }
 .completed-btn {
   padding: 0.2rem 0.8rem;
@@ -112,10 +119,11 @@ form button:hover {
 
 .completed-btn:hover {
   background: hsla(128, 74%, 40%, 0.52);
+  color: #fff;
 }
-.trash-btn:hover{
-  
+.trash-btn:hover {
   background: rgba(255, 5, 5, 0.5);
+  color: #fff;
 }
 .completed {
   text-decoration: line-through;
@@ -133,10 +141,24 @@ select {
   border: none;
   background: rgba(3, 3, 3, 0.5);
   border: 2px solid rgba(0, 0, 0, 0.4);
-  color: #fff;
   font-size: 1.5rem;
+  color: #e8eaed;
+
   padding: 0.5rem;
 }
-.select{
-  margin:1rem;
+.select {
+  display: flex;
+}
+.list-grid {
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #e8eaed;
+}
+.list-grid h3 {
+  margin: 1em;
+  font-size: 1rem;
+  color: #e8eaed;
+  font-variant: small-caps;
 }
