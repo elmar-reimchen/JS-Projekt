@@ -11,7 +11,7 @@ body {
   background: rgba(20, 20, 20, 0.945);
   min-height: 100vh;
   padding: 0 1rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   color: #e8eaed;
 }
 header {
@@ -21,34 +21,34 @@ header {
   justify-content: center;
   /* align-items: center;
   font-family: "Exo 2", sans-serif; */
-  font-variant: small-caps;
-  letter-spacing: 0px;
+text-transform: uppercase;  letter-spacing: 0px;
   text-shadow: -3px -3px 6px rgb(0 0 0 / 62%);
   padding: 2rem;
+  letter-spacing: 3px;
 }
 /*** Eingabefeld und Button zum erstellen von Aufgaben ***/
 form {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(3, 3, 3, 0.685);
+  background: rgb(15, 15, 15, 0.8);
   width: min-content;
   margin: 0 auto;
+  font-family: "Ariel", sans-serif;
 }
 .todo-input {
-  letter-spacing: 1px;
-  padding: 1rem;
+  letter-spacing: 3px;
+  padding: 1.2rem;
   padding-left: 20px;
   font-size: 1rem;
-  font-family: "Ariel", sans-serif;
-  background: rgba(3, 3, 3, 0.685);
+  background: transparent;
   border: none;
-  color: rgba(180, 102, 0, 0.937);
+  color: rgba(255, 166, 0, 0.6);
   outline: none;
 }
 .todo-input:focus {
   outline: none;
-  box-shadow: 0 0 30px rgba(255, 166, 0, 0.6);
+  box-shadow: 15px 0 50px rgba(255, 166, 0, 0.6);
 }
 /*** Button zum erstellen einer neuen Aufgabe ***/
 form button {
@@ -59,9 +59,9 @@ form button {
   display: grid;
   justify-content: center;
   font-size: 1.5rem;
-  height: 100%;
+  height: 55px;
   font-family: "Montserrat", sans-serif;
-  background: rgba(0, 0, 0, 0.7);
+  background: transparent;
   border: none;
 }
 button {
@@ -79,7 +79,6 @@ button {
 }
 button:hover {
   color: #fff;
-  background: orange;
 }
 input:hover {
   color: #fff;
@@ -95,6 +94,7 @@ input:hover {
 
 .card {
   display: flex;
+  gap:0.2em;
   flex-direction: row;
   align-items: center;
   background: #181818;
@@ -105,12 +105,13 @@ input:hover {
   height: 100%;
   width: 100%;
   border-radius: 4px;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
   overflow: hidden;
   justify-content: space-between;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding: 0 0.5rem;
 }
 
 .card:hover {
@@ -121,8 +122,11 @@ input:hover {
 .card-text {
   flex: 1;
   justify-self: flex-start;
-  font-size: 1.2rem;
-  padding: 0 0.5rem;
+  font-size: 1.1rem;
+  font-family: "Ariel", sans-serif;
+  padding: 1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 .fall {
@@ -133,7 +137,7 @@ input:hover {
 .completed-btn,
 .trash-btn {
   border: none;
-  max-height:4rem;
+  height:45px;
   width: 10%;
   cursor: pointer;
   font-size: 1rem;
