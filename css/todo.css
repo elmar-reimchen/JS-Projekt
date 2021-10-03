@@ -15,16 +15,16 @@ body {
   color: #e8eaed;
 }
 header {
-  font-size: calc(1.8rem + 1.2vw);
-  color: rgba(22, 22, 22, 0.835);
+  font-size: calc(1rem + 1.2vw);
+  color: rgb(115 114 114 / 65%);
   display: flex;
   justify-content: center;
-  align-items: center;
-  font-family: "Exo 2", sans-serif;
+  /* align-items: center;
+  font-family: "Exo 2", sans-serif; */
   font-variant: small-caps;
   letter-spacing: 0px;
-  text-shadow: -8px -8px 5px rgba(0, 0, 0, 0.616);
-  padding: 0 0 1.5em 0;
+  text-shadow: -3px -3px 6px rgb(0 0 0 / 62%);
+  padding: 2rem;
 }
 form {
   display: flex;
@@ -46,7 +46,7 @@ form {
 }
 .todo-input:focus {
   outline: none;
-  box-shadow: 0 0 80px rgba(255, 166, 0, 0.6);
+  box-shadow: 0 0 30px rgba(255, 166, 0, 0.6);
 }
 button {
   color: #646464;
@@ -87,7 +87,7 @@ input:hover {
   display: grid;
   gap: 1rem;
   margin: 3rem 0;
-  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
 }
 
 .card {
@@ -95,7 +95,7 @@ input:hover {
   flex-direction: row;
   align-items: center;
   background: #353535;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #fff;
   box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
     rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
@@ -104,7 +104,7 @@ input:hover {
   border-radius: 4px;
   transition: all 500ms;
   overflow: hidden;
-justify-content: space-between;
+  justify-content: space-between;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -118,6 +118,8 @@ justify-content: space-between;
 .card-text {
   flex: 1;
   justify-self: flex-start;
+  font-size: 1.2rem;
+  padding: 0 0.5rem;
 }
 /****************  AUFGABE   *******************/
 /* .todo-container {
