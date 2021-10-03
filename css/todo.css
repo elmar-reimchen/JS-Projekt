@@ -26,27 +26,43 @@ header {
   text-shadow: -3px -3px 6px rgb(0 0 0 / 62%);
   padding: 2rem;
 }
+/*** Eingabefeld und Button zum erstellen von Aufgaben ***/
 form {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: rgba(3, 3, 3, 0.685);
+  width: min-content;
+  margin: 0 auto;
 }
 .todo-input {
   letter-spacing: 1px;
-  padding: 0.5rem;
+  padding: 1rem;
   padding-left: 20px;
-  font-size: 1.5rem;
-  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-family: "Ariel", sans-serif;
   background: rgba(3, 3, 3, 0.685);
   border: none;
-  border-bottom: 4px solid rgba(0, 0, 0, 0.884);
-
+  color: rgba(180, 102, 0, 0.937);
   outline: none;
-  color: #e8eaed8a;
 }
 .todo-input:focus {
   outline: none;
   box-shadow: 0 0 30px rgba(255, 166, 0, 0.6);
+}
+/*** Button zum erstellen einer neuen Aufgabe ***/
+form button {
+  color: #646464;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-items: center;
+  display: grid;
+  justify-content: center;
+  font-size: 1.5rem;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
 }
 button {
   color: #646464;
@@ -55,20 +71,7 @@ button {
   align-items: center;
   display: grid;
   justify-content: center;
-  font-size: 1.5rem;
-  padding: 0.5rem;
-  font-family: "Montserrat", sans-serif;
-  background: rgba(0, 0, 0, 0.7);
-  border: none;
-}
-form button {
-  color: #646464;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  align-items: center;
-  display: grid;
-  justify-content: center;
-  font-size: 2.1rem;
+  font-size: 1rem;
   padding: 0.5rem;
   font-family: "Montserrat", sans-serif;
   background: rgba(0, 0, 0, 0.7);
@@ -94,7 +97,7 @@ input:hover {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background: #353535;
+  background: #181818;
   font-size: 1rem;
   color: #fff;
   box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
@@ -102,7 +105,7 @@ input:hover {
   height: 100%;
   width: 100%;
   border-radius: 4px;
-  transition: all 500ms;
+  transition: all 0.5s ease;
   overflow: hidden;
   justify-content: space-between;
   background-size: cover;
@@ -113,7 +116,7 @@ input:hover {
 .card:hover {
   box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
     rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
-  transform: translateY(-3px) scale(1.1);
+  /* transform: translateY(-3px) scale(1.1); */
 }
 .card-text {
   flex: 1;
@@ -121,7 +124,75 @@ input:hover {
   font-size: 1.2rem;
   padding: 0 0.5rem;
 }
-/****************  AUFGABE   *******************/
+
+.fall {
+  opacity: 0;
+  transform: translateY(8rem) rotateZ(20deg);
+}
+/* BUTTONS zum Löschen oder als erledigt markieren */
+.completed-btn,
+.trash-btn {
+  border: none;
+  max-height:4rem;
+  width: 10%;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: rgba(3, 3, 3, 0.607);
+  color: #646464;
+  justify-self: flex-end;
+  border: none;
+}
+.completed-btn:hover {
+  background: hsla(128, 74%, 40%, 0.52);
+  color: #fff;
+}
+.trash-btn:hover {
+  background: rgba(255, 5, 5, 0.5);
+  color: #fff;
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  background: rgba(3, 3, 3, 0.5);
+  border: none;
+  font-size: 1rem;
+  color: #e8eaed;
+  padding: 0 0.5rem;
+}
+.select {
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-end;
+  flex: 1;
+}
+.list-grid {
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  color: #e8eaed;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+.list-grid button {
+  justify-self: flex-start;
+  align-self: flex-start;
+}
+.list-grid h3 {
+  margin: 1em;
+  font-size: 1rem;
+  color: rgb(83, 83, 83);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/****************  AUFGABE  OLD *******************/
 /* .todo-container {
   display: flex;
   justify-content: center;
@@ -153,71 +224,3 @@ input:hover {
   height: 100%;
   justify-self: flex-start;
 } */
-
-.trash-btn,
-.completed-btn {
-  border: none;
-  padding: 0.8rem;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  background: rgba(3, 3, 3, 0.507);
-  color: #646464;
-  justify-self: flex-end;
-  border: none;
-}
-.completed-btn {
-  padding: 0.5rem 0.8rem;
-}
-.completed-btn:hover {
-  background: hsla(128, 74%, 40%, 0.52);
-  color: #fff;
-}
-.trash-btn:hover {
-  background: rgba(255, 5, 5, 0.5);
-  color: #fff;
-}
-.completed {
-  text-decoration: line-through;
-  opacity: 0.5;
-}
-.fall {
-  opacity: 0;
-  transform: translateY(8rem) rotateZ(20deg);
-}
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: none;
-  background: rgba(3, 3, 3, 0.5);
-  border: none;
-  font-size: 1rem;
-  color: #e8eaed;
-  padding: 0.5rem;
-}
-.select {
-  display: flex;
-  justify-content: flex-end;
-  align-self: flex-end;
-  flex: 1;
-}
-.list-grid {
-  margin: 1rem;
-  display: flex;
-  align-items: center;
-  color: #e8eaed;
-  gap: 0.5rem;
-  transition: all 0.3s ease;
-}
-.list-grid button {
-  justify-self: flex-start;
-  align-self: flex-start;
-}
-.list-grid h3 {
-  margin: 1em;
-  font-size: 1rem;
-  color: rgb(83, 83, 83);
-  text-transform: uppercase;
-  font-weight: bold;
-}
