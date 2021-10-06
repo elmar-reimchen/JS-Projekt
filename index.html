@@ -19,8 +19,8 @@
 
   <body>
     <div class="list-grid">
-      <button onclick="listView()"><i class="fa fa-bars"></i></button>
-      <button onclick="gridView()"><i class="fa fa-th-large"></i></button>
+      <button class="list-view-btn"><i class="fa fa-bars"></i></button>
+      <!-- <button onclick="gridView()"><i class="fa fa-th-large"></i></button> -->
 
       <div class="select">
         <h3><label for="todos">Filter:</label></h3>
@@ -38,15 +38,18 @@
 
     <!-- Eingabefeld für neue Aufgabe -->
     <form>
-      <input type="text" class="todo-input" placeholder="Neue Aufgabe" />
+      <input
+        type="text"
+        class="todo-input"
+        placeholder="Neue Aufgabe"
+      />
       <button class="todo-btn" type="submit">
         <i class="bx bx-plus"></i>
       </button>
     </form>
 
     <!-- Liste der erstellten Aufgaben -->
-    <section class="basic-grid">
-    </section>
+    <section class="basic-grid"></section>
 
     <script src="js/todo.js"></script>
   </body>

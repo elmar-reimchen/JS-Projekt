@@ -12,17 +12,17 @@ function addTodo(event) {
   //Browser soll nicht aktualisieren wenn neue Aufgabe hinzügefügt wird
   event.preventDefault();
 
-  // Erstelle div
-  // const todoDiv = document.createElement("section");
-  // todoDiv.classList.add("basic-grid");
-
-  // Erstelle li
+  // Erstelle div und
   const newTodo = document.createElement("div");
   const newTodoText = document.createElement("h2");
   newTodoText.innerText = todoInput.value;
+  const editable = newTodoText.contentEditable;
+  // if (todoInput.value === "") {
+  //   alert("You must write something!");
+  // } else
+  newTodoText.contentEditable = "true";
   newTodo.classList.add("card");
   newTodoText.classList.add("card-text");
-
   newTodo.appendChild(newTodoText);
   // erstelle Button um Aufgabe als erledigt zu markieren
   const completedButton = document.createElement("button");
@@ -57,3 +57,10 @@ function deleteCheck(e) {
     todo.classList.toggle("completed");
   }
 }
+
+// const toggleButton = document.querySelector(".list-view-btn");
+// const searchThisClass = document.querySelector(".basic-grid");
+
+// toggleButton.addEventListener("click", function () {
+//   searchThisClass.classList.toggle(".listen-ansicht");
+// });
