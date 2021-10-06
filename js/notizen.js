@@ -1,5 +1,6 @@
 //    SELECTORS
 const todoInput = document.querySelector(".todo-input");
+const todoInput2 = document.querySelector(".todo-input2");
 const todoButton = document.querySelector(".todo-btn");
 const todoList = document.querySelector(".basic-grid");
 
@@ -15,15 +16,20 @@ function addTodo(event) {
   // Erstelle div und
   const newTodo = document.createElement("div");
   const newTodoText = document.createElement("h2");
+  const newTodoText2 = document.createElement("p");
   newTodoText.innerText = todoInput.value;
+  newTodoText2.innerText = todoInput2.value;
   const editable = newTodoText.contentEditable;
   // if (todoInput.value === "") {
   //   alert("You must write something!");
   // } else
   newTodoText.contentEditable = "true";
+  newTodoText2.contentEditable = "true";
   newTodo.classList.add("card");
   newTodoText.classList.add("card-text");
+  newTodoText2.classList.add("card-text");
   newTodo.appendChild(newTodoText);
+  newTodo.appendChild(newTodoText2);
   // erstelle Button um Aufgabe als erledigt zu markieren
   const completedButton = document.createElement("button");
   completedButton.innerHTML = "&#10004;";
