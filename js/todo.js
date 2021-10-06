@@ -53,7 +53,7 @@ function deleteCheck(e) {
   }
 
   if (item.classList[0] === "completed-btn") {
-    const todo = item.parentElement;
+    const todo = document.querySelector("h2");
     todo.classList.toggle("completed");
   }
 }
