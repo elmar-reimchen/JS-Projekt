@@ -38,7 +38,7 @@ form {
   align-items: center;
   background: rgb(15, 15, 15, 0.8);
   width: min-content;
-  margin: 0 auto;
+  margin: 2rem auto 3rem;
   font-family: "Montserrat", sans-serif;
   transition: all 0.3s ease;
 }
@@ -173,6 +173,7 @@ select {
   color: #646464;
   height: 34px;
   align-self: center;
+  padding-left: 0.5rem;
 }
 .select {
   display: flex;
