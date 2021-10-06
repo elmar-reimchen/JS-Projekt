@@ -59,9 +59,12 @@ function deleteCheck(e) {
   }
 }
 
-// const toggleButton = document.querySelector(".list-view-btn");
-// const searchThisClass = document.querySelector(".basic-grid");
+const toggleButton = document.querySelector(".list-view-btn");
+const searchThisClass = document.querySelector(".basic-grid");
 
-// toggleButton.addEventListener("click", function () {
-//   searchThisClass.classList.toggle(".listen-ansicht");
-// });
+toggleButton.addEventListener("click", function () {
+  document.getElementById(".list-view-btn");
+  searchThisClass.classList.toggle("listen-ansicht");
+  toggleButton.classList.toggle("fa-bars");
+  toggleButton.classList.toggle("fa-th-large");
+});

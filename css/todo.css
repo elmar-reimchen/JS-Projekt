@@ -5,14 +5,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-weight: normal;
 }
 body {
   background: rgba(20, 20, 20, 0.945);
   min-height: 100vh;
   padding: 0 1rem;
   font-family: "Bebas Neue", sans-serif;
-  color: #e8eaed;
+  max-width: 90rem;
+  margin: 0 auto;
 }
 header {
   display: flex;
@@ -28,6 +28,8 @@ header {
 h1 {
   font-size: calc(1.5rem + 3vw);
   color: rgb(115 114 114 / 65%);
+  font-family: "Bebas Neue";
+  font-weight: normal;
 }
 /*** Eingabefeld und Button zum erstellen von Aufgaben ***/
 form {
@@ -37,7 +39,8 @@ form {
   background: rgb(15, 15, 15, 0.8);
   width: min-content;
   margin: 0 auto;
-  font-family: "Ariel", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.3s ease;
 }
 .todo-input {
   letter-spacing: 3px;
@@ -49,9 +52,10 @@ form {
   color: rgba(255, 166, 0, 0.6);
   outline: none;
 }
-.todo-input:focus {
+form:hover {
   outline: none;
-  box-shadow: 15px 0 90px rgba(255, 166, 0, 0.6);
+  box-shadow: 8px 0 50px rgba(255, 166, 0, 0.6);
+  transform: scale(1.1);
 }
 /*** Button zum erstellen einer neuen Aufgabe ***/
 form button {
@@ -63,7 +67,6 @@ form button {
   justify-content: center;
   font-size: 1.5rem;
   height: 55px;
-  font-family: "Montserrat", sans-serif;
   background: transparent;
   border: none;
 }
@@ -102,35 +105,35 @@ input:hover {
   background: #181818;
   font-size: 1rem;
   color: #fff;
-  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
-    rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem; /*,
+    rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem; */
   width: 100%;
   border-radius: 4px;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   overflow: hidden;
   justify-content: space-between;
   padding-left: 0.5rem;
   word-break: break-all;
   height: max-content;
+  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.65em 1.175em;
 }
 
 .card:hover {
-  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
-    rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
-  /* transform: translateY(-3px) scale(1.1); */
+  box-shadow: rgb(153, 153, 153) 0px 0px 2em;
+  transform: scale(1.05);
 }
 .card-text {
   flex: 1;
   justify-self: flex-start;
   font-size: 1.1rem;
-  font-family: "Ariel", sans-serif;
+  font-family: "Montserrat", sans-serif;
   letter-spacing: 2px;
   padding: 1rem;
 }
 
 .fall {
   opacity: 0;
-  transform: translateY(8rem) rotateZ(20deg);
+  transform: scale(0%);
 }
 /* BUTTONS zum Löschen oder als erledigt markieren */
 .completed-btn,
@@ -140,12 +143,12 @@ input:hover {
   width: 10%;
   cursor: pointer;
   font-size: 1rem;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   background: rgba(3, 3, 3, 0.607);
   color: #646464;
   align-self: flex-start;
   border: none;
-  margin: 5px 5px 0 0;
+  margin: 3px 3px 0 0;
 }
 .completed-btn:hover {
   background: hsla(128, 74%, 40%, 0.52);
@@ -167,68 +170,34 @@ select {
   background: rgba(3, 3, 3, 0.5);
   border: none;
   font-size: 1rem;
-  color: #e8eaed;
-  padding: 0 0.5rem;
+  color: #646464;
+  height: 34px;
+  align-self: center;
 }
 .select {
   display: flex;
-  justify-content: flex-end;
-  align-self: flex-end;
-  flex: 1;
+  color: #e8eaed;
 }
 .list-grid {
   margin: 1rem;
   display: flex;
+  justify-content: center;
   align-items: center;
-  color: #e8eaed;
   gap: 0.5rem;
   transition: all 0.3s ease;
-}
-.list-grid button {
-  justify-self: flex-start;
-  align-self: flex-start;
 }
 .list-grid h3 {
   margin: 1em;
   font-size: 1rem;
-  color: rgb(83, 83, 83);
+  color: rgb(107, 107, 107);
   text-transform: uppercase;
-  font-weight: bold;
+  letter-spacing: 2px;
 }
 /***************** TOGGLE Elemente **************/
 .listen-ansicht {
-  grid-template-columns: 1fr;
-  background-color: #e8eaed;
-}
-/****************  AUFGABE  OLD *******************/
-/* .todo-container {
   display: flex;
+  flex-direction: column;
+  max-width: 30rem;
   justify-content: center;
-  align-items: center;
+  margin: 2rem auto;
 }
-.todo-list {
-  margin-top: 3em;
-  list-style: none;
-   min-width: 45%; 
-}
-.todo {
-  display: flex;
-  margin: 1rem;
-  justify-content: flex-start;
-  align-items: center;
-  font-size: 1.5rem;
-  font-family: "Montserrat", sans-serif;
-  font-variant: small-caps;
-  transition: all 0.5s ease;
-  background: rgba(3, 3, 3, 0.507);
-  border-radius: 2px;
-  letter-spacing: 2px;
-  color: #e8eaed;
-}
-
-.todo-item {
-  padding: 0 1rem;
-  flex: 1;
-  height: 100%;
-  justify-self: flex-start;
-} */
