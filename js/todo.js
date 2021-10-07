@@ -59,12 +59,22 @@ function deleteCheck(e) {
   }
 }
 
-const toggleButton = document.querySelector(".list-view-btn");
+const toggleGrid = document.querySelector(".list-view-btn");
+const toggleDarkmode = document.querySelector(".darkmode-btn");
 const searchThisClass = document.querySelector(".basic-grid");
+const searchbody = document.querySelector(".dark");
+const searchInput = document.querySelector(".todo-input");
 
-toggleButton.addEventListener("click", function () {
+toggleGrid.addEventListener("click", function () {
   document.getElementById(".list-view-btn");
   searchThisClass.classList.toggle("listen-ansicht");
-  toggleButton.classList.toggle("fa-bars");
-  toggleButton.classList.toggle("fa-th-large");
+  toggleGrid.classList.toggle("fa-bars");
+  toggleGrid.classList.toggle("fa-th-large");
+});
+
+toggleDarkmode.addEventListener("click", function () {
+  document.getElementById(".darkmode-btn");
+  searchbody.classList.toggle("dark");
+  searchInput.classList.toggle("light-mode");
+  toggleDarkmode.classList.toggle("light-mode");
 });

@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+
 :root {
   --clr-1: #1e90ff;
   --clr-2: #1e90ff;
@@ -13,12 +15,14 @@
   box-sizing: border-box;
 }
 body {
-  background: rgba(20, 20, 20, 0.945);
   min-height: 100vh;
   padding: 0 1rem;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Roboto", sans-serif;
   max-width: 90rem;
   margin: 0 auto;
+}
+.dark {
+  background: rgba(20, 20, 20, 0.945);
 }
 header {
   display: flex;
@@ -46,7 +50,6 @@ form {
   background: rgb(15, 15, 15, 0.8);
   width: min-content;
   margin: 2rem auto 3rem;
-  font-family: "Montserrat", sans-serif;
   transition: all 0.3s ease;
   border-radius: 4px;
 }
@@ -112,7 +115,6 @@ input:hover {
   flex-direction: row;
   align-items: center;
   background: #181818;
-  font-size: 1rem;
   color: #fff;
   box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem; /*,
     rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem; */
@@ -124,7 +126,7 @@ input:hover {
   padding-left: 0.5rem;
   word-break: break-all;
   height: max-content;
-  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.65em 1.175em;
+  /* box-shadow: rgba(2, 8, 20, 0.1) 0px 0.65em 1.175em; */
 }
 
 .card:hover {
@@ -132,17 +134,15 @@ input:hover {
   transform: scale(1.05);
   border: 2px solid var(--clr-3);
 }
+.card-text {
+  flex: 1;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  padding: 1rem;
+}
 .card-text:focus {
   outline: none;
   border: none;
-}
-.card-text {
-  flex: 1;
-  justify-self: flex-start;
-  font-size: 1.1rem;
-  font-family: "Montserrat", sans-serif;
-  letter-spacing: 2px;
-  padding: 1rem;
 }
 
 .fall {
@@ -193,6 +193,9 @@ select {
   display: flex;
   color: #e8eaed;
 }
+select:hover {
+  color: #fff;
+}
 .list-grid {
   margin: 1rem;
   display: flex;
@@ -202,8 +205,8 @@ select {
   transition: all 0.3s ease;
 }
 .list-grid h3 {
-  margin: 1em;
-  font-size: 1rem;
+  margin: 0.5rem;
+  font-size: 0.7rem;
   color: rgb(107, 107, 107);
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -215,4 +218,8 @@ select {
   max-width: 45rem;
   justify-content: center;
   margin: 2rem auto;
+}
+.light-mode {
+  background-color: #fff;
+  color: #181818;
 }
