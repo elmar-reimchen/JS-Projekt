@@ -8,7 +8,9 @@
   const toggleDarkmode = document.querySelector(".darkmode-btn");
   const searchThisClass = document.querySelector(".basic-grid");
   const searchbody = document.querySelector(".dark");
-  const searchInput = document.querySelector(".todo-input");
+  const searchInput = document.querySelector("form");
+  const lightmodeTodo = document.querySelector(".card");
+  const lightmodeFilter = document.querySelector(".filter-todo");
 
   // const filterOption = document.querySelector(".filter-todo");
 
@@ -31,6 +33,11 @@
     searchbody.classList.toggle("dark");
     searchInput.classList.toggle("light-mode");
     toggleDarkmode.classList.toggle("light-mode");
+    toggleGrid.classList.toggle("light-mode");
+    lightmodeButtons.classList.toggle("light-mode");
+    lightmodeTodo.classList.toggle("light-mode");
+    lightmodeTodo.classList.toggle(".card");
+    lightmodeFilter.classList.toggle("light-mode");
   });
 
   // *******************  FUNCTIONS *******************

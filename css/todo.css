@@ -80,7 +80,7 @@ button {
   display: grid;
   justify-content: center;
   font-size: 1rem;
-  padding: 0.5rem;
+  padding: 0.35rem;
   background: rgba(0, 0, 0, 0.7);
   border: none;
 }
@@ -223,4 +223,38 @@ select:hover {
 .light-mode {
   background-color: #fff;
   color: #181818;
+  transition: all 0.3s ease;
+  border: 2px solid #ccc;
+}
+
+button.light-mode:hover {
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+select.light-mode {
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+}
+
+select.light-mode:hover {
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input.light-mode {
+  color: #000;
+  border: 3px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+form.light-mode:hover,
+.light-mode input:hover {
+  color: #000;
+  border-radius: 4px;
 }
