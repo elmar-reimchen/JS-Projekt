@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,800&display=swap");
+:root {
+  --clr-1: #1e90ff;
+  --clr-2: #1e90ff;
+  --clr-3: #1e90ff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -30,6 +36,7 @@ h1 {
   color: rgb(115 114 114 / 65%);
   font-family: "Bebas Neue";
   font-weight: normal;
+  border-bottom: 3px solid #1e90ff2e;
 }
 /*** Eingabefeld und Button zum erstellen von Aufgaben ***/
 form {
@@ -41,6 +48,7 @@ form {
   margin: 2rem auto 3rem;
   font-family: "Montserrat", sans-serif;
   transition: all 0.3s ease;
+  border-radius: 4px;
 }
 .todo-input {
   letter-spacing: 3px;
@@ -49,12 +57,12 @@ form {
   font-size: 1rem;
   background: transparent;
   border: none;
-  color: rgba(255, 166, 0, 0.6);
+  color: var(--clr-2);
   outline: none;
 }
 form:hover {
   outline: none;
-  box-shadow: 8px 0 50px rgba(255, 166, 0, 0.6);
+  box-shadow: 8px 0 70px var(--clr-2);
   transform: scale(1.1);
 }
 /*** Button zum erstellen einer neuen Aufgabe ***/
@@ -140,7 +148,7 @@ input:hover {
 .trash-btn {
   border: none;
   height: 45px;
-  width: 10%;
+  width: 8%;
   cursor: pointer;
   font-size: 1rem;
   transition: all 0.4s ease;
@@ -167,7 +175,7 @@ select {
   -moz-appearance: none;
   appearance: none;
   outline: none;
-  background: rgba(3, 3, 3, 0.5);
+  background: rgba(0, 0, 0, 0.5);
   border: none;
   font-size: 1rem;
   color: #646464;
@@ -198,7 +206,7 @@ select {
 .listen-ansicht {
   display: flex;
   flex-direction: column;
-  max-width: 30rem;
+  max-width: 45rem;
   justify-content: center;
   margin: 2rem auto;
 }
