@@ -5,8 +5,8 @@
 
 :root {
   --clr-1: #1e90ff;
-  --clr-2: #1e90ff;
-  --clr-3: rgb(153, 153, 153);
+  --clr-2: #70b5fa;
+  --clr-3: #9c9c9c;
 }
 
 * {
@@ -22,7 +22,7 @@ body {
   margin: 0 auto;
 }
 .dark {
-  background: rgba(20, 20, 20, 0.945);
+  background: rgba(41, 41, 41, 0.945);
 }
 header {
   display: flex;
@@ -37,7 +37,7 @@ header {
 }
 h1 {
   font-size: calc(1.5rem + 2vw);
-  color: rgb(115 114 114 / 65%);
+  color: rgb(115 114 114 / 80%);
   font-family: "Bebas Neue";
   font-weight: normal;
   border-bottom: 3px solid #1e90ff2e;
@@ -52,16 +52,6 @@ form {
   margin: 2rem auto 3rem;
   transition: all 0.3s ease;
   border-radius: 4px;
-}
-.todo-input {
-  letter-spacing: 3px;
-  padding: 1rem;
-  padding-left: 20px;
-  font-size: 1rem;
-  background: transparent;
-  border: none;
-  color: var(--clr-2);
-  outline: none;
 }
 form:hover {
   outline: none;
@@ -83,7 +73,7 @@ form button {
   border: none;
 }
 button {
-  color: #646464;
+  color: var(--clr-3);
   cursor: pointer;
   transition: all 0.3s ease;
   align-items: center;
@@ -91,7 +81,6 @@ button {
   justify-content: center;
   font-size: 1rem;
   padding: 0.5rem;
-  font-family: "Montserrat", sans-serif;
   background: rgba(0, 0, 0, 0.7);
   border: none;
 }
@@ -101,8 +90,19 @@ button:hover {
 input:hover {
   color: #fff;
 }
-/*************** GRID Container ****************/
 
+/*************** Eingabefeld ****************/
+.todo-input {
+  letter-spacing: 3px;
+  padding: 1rem;
+  padding-left: 20px;
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  color: var(--clr-2);
+  outline: none;
+}
+/*************** GRID  ****************/
 .basic-grid {
   display: grid;
   gap: 1rem;
@@ -144,7 +144,7 @@ input:hover {
   outline: none;
   border: none;
 }
-
+/* Animation beim Läschen einer Aufgabe */
 .fall {
   opacity: 0;
   transform: scale(0%);
@@ -176,6 +176,7 @@ input:hover {
   text-decoration: line-through;
   opacity: 0.5;
 }
+/*************** Filter  ****************/
 select {
   -webkit-appearance: none;
   -moz-appearance: none;

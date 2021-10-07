@@ -1,5 +1,6 @@
 (function () {
-  //    SELECTORS
+  //   ******************* SELECTORS *******************
+
   const todoInput = document.querySelector(".todo-input");
   const todoButton = document.querySelector(".todo-btn");
   const todoList = document.querySelector(".basic-grid");
@@ -11,12 +12,13 @@
 
   // const filterOption = document.querySelector(".filter-todo");
 
-  //    EVENTS
-  todoButton.addEventListener("click", addTodo);
-  todoList.addEventListener("click", deleteCheck);
+  //   ****************** EVENTS **********************
+
   // filterOption.addEventListener("click", filterTodo);
   // document.addEventListener("DOMContentLoaded", getTodos);
-  
+  todoButton.addEventListener("click", addTodo);
+  todoList.addEventListener("click", deleteCheck);
+
   toggleGrid.addEventListener("click", function () {
     document.getElementById(".list-view-btn");
     searchThisClass.classList.toggle("listen-ansicht");
@@ -31,7 +33,8 @@
     toggleDarkmode.classList.toggle("light-mode");
   });
 
-  //   FUNCTIONS
+  // *******************  FUNCTIONS *******************
+
   function addTodo(e) {
     //Browser soll nicht aktualisieren wenn neue Aufgabe hinzügefügt wird
     e.preventDefault();
@@ -82,5 +85,4 @@
       todo.classList.toggle("completed");
     }
   }
-
 })();
