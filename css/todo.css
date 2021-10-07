@@ -4,7 +4,7 @@
 :root {
   --clr-1: #1e90ff;
   --clr-2: #1e90ff;
-  --clr-3: #1e90ff;
+  --clr-3: rgb(153, 153, 153);
 }
 
 * {
@@ -64,6 +64,7 @@ form:hover {
   outline: none;
   box-shadow: 8px 0 70px var(--clr-2);
   transform: scale(1.1);
+  border: 2px solid var(--clr-2);
 }
 /*** Button zum erstellen einer neuen Aufgabe ***/
 form button {
@@ -127,8 +128,13 @@ input:hover {
 }
 
 .card:hover {
-  box-shadow: rgb(153, 153, 153) 0px 0px 2em;
+  box-shadow: var(--clr-3) 0px 0px 2em;
   transform: scale(1.05);
+  border: 2px solid var(--clr-3);
+}
+.card-text:focus {
+  outline: none;
+  border: none;
 }
 .card-text {
   flex: 1;
@@ -156,7 +162,7 @@ input:hover {
   color: #646464;
   align-self: flex-start;
   border: none;
-  margin: 3px 3px 0 0;
+  margin: 4px 3px 0 0;
 }
 .completed-btn:hover {
   background: hsla(128, 74%, 40%, 0.52);
