@@ -18,10 +18,8 @@
 
   // filterOption.addEventListener("click", filterTodo);
   // document.addEventListener("DOMContentLoaded", getTodos);
-  document.addEventListener("DOMContentLoaded", getTodos);
   todoButton.addEventListener("click", addTodo);
   todoList.addEventListener("click", deleteCheck);
-  lightmodeFilter.addEventListener("click", filterTodo);
 
   toggleGrid.addEventListener("click", function () {
     document.getElementById(".list-view-btn");
