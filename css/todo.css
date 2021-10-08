@@ -189,13 +189,29 @@ select {
   height: 34px;
   align-self: center;
   padding-left: 0.5rem;
+  position: relative;
+}
+select:hover {
+  color: #fff;
 }
 .select {
   display: flex;
   color: #e8eaed;
+  position: relative;
 }
-select:hover {
-  color: #fff;
+
+/* Arrow */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding:.45rem;
+  background: transparent;
+  cursor: pointer;
+  pointer-events: none;
+  font-size: 1rem;
+  color: var(--clr-3);
 }
 .list-grid {
   margin: 1rem;

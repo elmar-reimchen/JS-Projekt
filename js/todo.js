@@ -18,8 +18,10 @@
 
   // filterOption.addEventListener("click", filterTodo);
   // document.addEventListener("DOMContentLoaded", getTodos);
+  document.addEventListener("DOMContentLoaded", getTodos);
   todoButton.addEventListener("click", addTodo);
   todoList.addEventListener("click", deleteCheck);
+  lightmodeFilter.addEventListener("click", filterTodo);
 
   toggleGrid.addEventListener("click", function () {
     document.getElementById(".list-view-btn");
@@ -78,9 +80,11 @@
   // Aufgabe löschen
   function deleteCheck(e) {
     const item = e.target;
+
     if (item.classList[0] === "trash-btn") {
       const todo = item.parentElement;
       todo.classList.add("fall");
+      removeLocalTodos(todo);
       todo.addEventListener("transitionend", function () {
         todo.remove();
       });
