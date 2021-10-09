@@ -18,9 +18,11 @@
     />
     <link
       rel="stylesheet"
-      href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"
-    /> -->
-    <link rel="stylesheet" href="./css/todo.css" />
+      href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" />
+    
+  -->
+
+    <link rel="stylesheet" href="todo.css" />
 
     <title>Todo Liste</title>
   </head>
@@ -36,14 +38,14 @@
       <button class="todo-btn bx bx-plus" type="submit"></button>
     </form>
     <div class="list-grid">
-      <h3>Farbe:</h3>
+      <span>Farbe:</span>
       <button class="darkmode-btn fa fa-adjust" aria-hidden="true"></button>
-      <h3>Ansicht:</h3>
+      <span>Ansicht:</span>
       <button class="list-view-btn fa fa-bars"></button>
       <!-- <button onclick="gridView()"><i class="fa fa-th-large"></i></button> -->
       <!-- Filter -->
       <div class="select">
-        <h3>Filter:</h3>
+        <span>Filter:</span>
         <select name="todos" id="todos" class="filter-todo">
           <option value="all">Alle</option>
           <option value="complete">Erledigt</option>
@@ -54,7 +56,7 @@
     <!-- Liste der erstellten Aufgaben -->
     <section class="basic-grid"></section>
     <!-- JavaScript -->
-    <script src="js/todo.js"></script>
+    <script src="todo.js"></script>
     <!-- <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script> -->
   </body>
 </html>
